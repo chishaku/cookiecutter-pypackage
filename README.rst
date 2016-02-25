@@ -9,6 +9,7 @@ cookiecutter-pypackage
 This was forked from: https://github.com/audreyr/cookiecutter-pypackage. Here are the differences of this forked version:
 
 * Changed license to unlicense_ for the public domain.
+* Update docs configuration: more extensions, markdown support and ReadTheDocs_ theme.
 * Add `autoenv`_ file for auto-activating virtualenvs, initializing environment variables, etc.
 * Add ``..sublime-project`` file for developing with `Sublime Text`_.
 * Required packages are not hardcoded in the ``setup.py`` file. All the required packages are inside the ``requirements`` folder.
