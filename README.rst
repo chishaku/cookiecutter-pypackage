@@ -5,6 +5,16 @@ cookiecutter-pypackage
 .. image:: https://img.shields.io/travis/audreyr/cookiecutter-pypackage.svg
    :target: https://travis-ci.org/audreyr/cookiecutter-pypackage
 
+
+This was forked from: https://github.com/audreyr/cookiecutter-pypackage. Here are the differences of this forked version:
+
+* Changed license to unlicense_ for the public domain.
+
+
+.. _unlicense: http://unlicense.org
+
+----
+
 Cookiecutter_ template for a Python package.
 
 * GitHub repo: https://github.com/audreyr/cookiecutter-pypackage/
