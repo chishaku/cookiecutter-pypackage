@@ -22,6 +22,10 @@ This was forked from: https://github.com/audreyr/cookiecutter-pypackage. Here ar
     │   ├── prod.txt
     │   ├── test.txt
 
+**TODO**
+
+* Parameterize private|public projects; change license, url, etc.
+
 .. _unlicense: http://unlicense.org
 .. _autoenv: https://github.com/kennethreitz/autoenv
 .. _`Sublime Text`: https://www.sublimetext.com/
