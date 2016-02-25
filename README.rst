@@ -9,7 +9,16 @@ cookiecutter-pypackage
 This was forked from: https://github.com/audreyr/cookiecutter-pypackage. Here are the differences of this forked version:
 
 * Changed license to unlicense_ for the public domain.
-* Add `..sublime-project` file for developing with `Sublime Text`_.
+* Add ``..sublime-project`` file for developing with `Sublime Text`_.
+* Required packages are not hardcoded in the ``setup.py`` file. All the required packages are inside the ``requirements`` folder.
+* Package requirements are broken down into separate files::
+
+.. code:: bash
+
+    ├── requirements
+    │   ├── dev.txt
+    │   ├── prod.txt
+    │   ├── test.txt
 
 .. _unlicense: http://unlicense.org
 .. _`Sublime Text`: https://www.sublimetext.com/

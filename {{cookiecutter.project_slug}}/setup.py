@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from pip.req import parse_requirements
 
 try:
     from setuptools import setup
@@ -14,13 +15,20 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [
-    # TODO: put package requirements here
-]
 
-test_requirements = [
-    # TODO: put package test requirements here
-]
+parsed_requirements = parse_requirements(
+    'requirements/prod.txt',
+    session=pip.download.PipSession()
+)
+
+parsed_test_requirements = parse_requirements(
+    'requirements/test.txt',
+    session=pip.download.PipSession()
+)
+
+requirements = [str(ir.req) for ir in parsed_requirements]
+test_requirements = [str(tr.req) for tr in parsed_test_requirements]
+
 
 setup(
     name='{{ cookiecutter.project_slug }}',
