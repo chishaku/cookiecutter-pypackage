@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import pip
 from pip.req import parse_requirements
 
 try:
@@ -45,6 +46,11 @@ setup(
                  '{{ cookiecutter.project_slug }}'},
     include_package_data=True,
     install_requires=requirements,
+    entry_points={
+        'console_scripts': [
+            '{{ cookiecutter.project_slug }} = {{ cookiecutter.project_slug }}.{{ cookiecutter.project_slug }}:cli',
+        ]
+    },
     license="Public Domain",
     zip_safe=False,
     keywords='{{ cookiecutter.project_slug }}',

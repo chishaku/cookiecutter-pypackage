@@ -9,5 +9,6 @@
 	"pypi_username": "{{ cookiecutter.github_username }}",
 	"year": "2016",
 	"version": "0.1.0",
+	"add_cli_entry_point": "y",
 	"use_pypi_deployment_with_travis": "n"
 }
