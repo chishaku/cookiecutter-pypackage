@@ -8,6 +8,11 @@ cookiecutter-pypackage
 
 This was forked from: https://github.com/audreyr/cookiecutter-pypackage. Here are the differences of this forked version:
 
+* Include a ``make init`` command to initialize a project.
+    * ``git init`` and initial commit
+    * create a virtual environment
+    * ``python setup.py develop``
+    * ``blackbox_initialize`` <- `StackOverflow's blackbox`_ library for managing secrets
 * Include option to add command line interface boilerplate using the amazing `click`_ library.
 * Changed license to unlicense_ for the public domain.
 * Update docs configuration: more extensions, markdown support and ReadTheDocs_ theme.
@@ -28,6 +33,7 @@ This was forked from: https://github.com/audreyr/cookiecutter-pypackage. Here ar
 * Parameterize private|public projects; change license, url, etc.
 
 .. _click: http://click.pocoo.org
+.. _`StackOverflow's blackbox`: https://github.com/StackExchange/blackbox
 .. _unlicense: http://unlicense.org
 .. _autoenv: https://github.com/kennethreitz/autoenv
 .. _`Sublime Text`: https://www.sublimetext.com/

@@ -16,6 +16,7 @@ help:
 	@echo "clean-build - remove build artifacts"
 	@echo "clean-pyc - remove Python file artifacts"
 	@echo "clean-test - remove test and coverage artifacts"
+	@echo "init - initialize the project: git init, git commit, virtualenv, blackbox_initialize"
 	@echo "lint - check style with flake8"
 	@echo "test - run tests quickly with the default Python"
 	@echo "test-all - run tests on every Python version with tox"
@@ -44,6 +45,16 @@ clean-test:
 	rm -fr .tox/
 	rm -f .coverage
 	rm -fr htmlcov/
+
+init:
+	git init
+	git add --all :/
+	git commit -m "Initial commit with gh:chishaku/cookiecutter-pypackage."
+	virtualenv env
+	env/bin/python setup.py develop
+	blackbox_initialize
+	@echo 'FOLLOWING STEP: Add a blackbox admin:'
+	@echo '      blackbox_addadmin email@example.com'
 
 lint:
 	flake8 {{ cookiecutter.project_slug }} tests
