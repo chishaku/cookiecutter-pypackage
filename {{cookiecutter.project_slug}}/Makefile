@@ -26,6 +26,13 @@ help:
 	@echo "dist - package"
 	@echo "install - install the package to the active Python's site-packages"
 
+init:
+	git init
+	git add --all :/
+	git commit -m "Initial commit with gh:chishaku/cookiecutter-pypackage."
+	virtualenv env
+	env/bin/python setup.py develop
+
 clean: clean-build clean-pyc clean-test
 
 clean-build:
@@ -45,16 +52,6 @@ clean-test:
 	rm -fr .tox/
 	rm -f .coverage
 	rm -fr htmlcov/
-
-init:
-	git init
-	git add --all :/
-	git commit -m "Initial commit with gh:chishaku/cookiecutter-pypackage."
-	virtualenv env
-	env/bin/python setup.py develop
-	blackbox_initialize
-	@echo 'FOLLOWING STEP: Add a blackbox admin:'
-	@echo '      blackbox_addadmin email@example.com'
 
 lint:
 	flake8 {{ cookiecutter.project_slug }} tests

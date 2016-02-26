@@ -12,7 +12,6 @@ This was forked from: https://github.com/audreyr/cookiecutter-pypackage. Here ar
     * ``git init`` and initial commit
     * create a virtual environment
     * ``python setup.py develop``
-    * ``blackbox_initialize`` <- `StackOverflow's blackbox`_ library for managing secrets
 * Include option to add command line interface boilerplate using the amazing `click`_ library.
 * Changed license to unlicense_ for the public domain.
 * Update docs configuration: more extensions, markdown support and ReadTheDocs_ theme.
