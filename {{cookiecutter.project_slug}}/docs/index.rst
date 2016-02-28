@@ -1,8 +1,6 @@
 {{ cookiecutter.project_name }} documentation
 ======================================
 
-Contents:
-
 .. toctree::
    :maxdepth: 2
 

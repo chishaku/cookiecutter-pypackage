@@ -31,6 +31,7 @@ init:
 	git add --all :/
 	git commit -m "Initial commit with gh:chishaku/cookiecutter-pypackage."
 	virtualenv env
+	env/bin/pip install -r requirements/dev.txt
 	env/bin/python setup.py develop
 
 clean: clean-build clean-pyc clean-test
@@ -57,11 +58,8 @@ lint:
 	flake8 {{ cookiecutter.project_slug }} tests
 
 test:
-	py.test
-
-test-all:
 	tox
-
+	
 coverage:
 	coverage run --source {{ cookiecutter.project_slug }} setup.py test
 	coverage report -m
